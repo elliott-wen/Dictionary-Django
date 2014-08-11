@@ -1,0 +1,49 @@
+
+
+{% load url from future %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>{% block title %}Everdict{% endblock %}</title>
+    {% bootstrap_css %}
+    <link href="{% static 'base.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'fav.ico' %}" type="image/x-icon" />
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+ <div class="header">
+    <div class="container">
+            <ul class="nav nav-pills pull-right">
+              <li class="active"><a href="{% url 'index' %}">Home</a></li>
+               {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+               {% else%}
+                   <li><a href="{% url 'login' %}">Login</a></li>
+               {% endif %}
+            </ul>
+            <h3 class="text-muted">Everdict</h3>
+    </div>
+   </div>
+
+    <div class="message-bar">
+        <div class="container">
+            {% bootstrap_messages %}
+        </div>
+    </div>
+
+
+
+
+{% block content %} {% endblock %}
+</body>
+{% bootstrap_javascript jquery=1 %}
+
+{% block extra_script %}{% endblock %}
+</html>
+

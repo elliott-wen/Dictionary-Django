@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+{% block title %}
+    Login
+{% endblock %}
+{% block content %}
+        <div class="login-form">
+            <div class="container">
+                <form class="form-signin" action="" method="post">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    <input type="hidden" value="{{ next }}" name="next"/>
+                    {% buttons submit='OK' reset="Cancel" %}{% endbuttons %}
+                </form>
+            </div>
+        </div>
+{% endblock %}
+
+
+

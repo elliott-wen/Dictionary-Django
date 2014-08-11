@@ -1,0 +1,6 @@
+.idea
+*.sqlite3
+dict/
+__pycache__
+dictionary.py
+

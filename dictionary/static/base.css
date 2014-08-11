@@ -1,0 +1,33 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header,
+{
+  padding-right: 15px;
+  padding-left: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.message-bar
+{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top:10px;
+}
+.header h3 {
+  padding-bottom: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+.container {
+    max-width: 730px;
+ }
+
+.result{
+    margin-top:10px;
+}
+
